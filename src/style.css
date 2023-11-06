@@ -1,0 +1,57 @@
+:root {
+  --inner-content-width : 600px;
+  --cGrOne : #B6E2DD;
+  --cGrTwo : #85AEA6;
+  --cGrThree : #34534D;
+  --cGyOne : #D9E5E3;
+  --cGyTwo: #E8E8E8;
+
+  --fsSmall : .8rem;
+  --fsNormal : 1rem;
+}
+html {
+  background-color: var(--cGrTwo);
+}
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.inner-content {
+  width: var(--inner-content-width);
+  margin: 0 auto; 
+  /* padding: 20px 15px 30px; */
+  padding: 0 30px;
+}
+
+section {
+  margin: 30px 0;
+}
+
+.cGrOne {
+  color: var(--cGrOne);
+}
+.cGrTwo {
+  color: var(--cGrTwo);
+}
+.cGrThree {
+  color: var(--cGrThree);
+}

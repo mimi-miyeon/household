@@ -1,0 +1,21 @@
+.header__inner-content {
+  display: flex;
+  padding-bottom: 10px;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.header__inner-content h1 {
+  font-size: var(--fsSmall);
+  font-weight: normal;
+  color: var(--cGrOne);
+}
+
+header {
+  padding-top: 30px;
+  border-bottom: 1px solid var(--cGyOne);
+}
+
+header button {
+  font-size: 20px;
+  padding: 10px;
+}

@@ -1,0 +1,34 @@
+.section--graph {}
+.section--graph .wrapper {
+  margin: auto;
+  padding: 15px 30px;
+  box-sizing: border-box;
+  background-color: var(--cGyOne);
+  border-radius: 15px
+}
+.section--graph .wrapper h2 {
+  color: var(--cGrThree);
+  font-size:var(--fsSmall)
+}
+.section--graph .wrapper .con-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+}
+.graph-bars {
+  position: relative;
+  height: 100%;
+}
+
+.graph-bars li {}
+
+.graph-labels {
+  display: flex;
+  color: var(--cGrThree);
+  font-size:var(--fsSmall);
+  font-weight: bold;
+}
+.graph-labels li {
+  width: calc(100% / 5);
+  text-align: center
+}
