@@ -1,0 +1,76 @@
+.section--graph {}
+.section--graph .wrapper {
+  margin: auto;
+  padding: 1.5rem 2rem;
+  box-sizing: border-box;
+  background-color: var(--cGyOne);
+  border-radius: 1rem;
+}
+.section--graph .wrapper h2 {
+  color: var(--cGrThree);
+  font-size:var(--fsSmall);
+}
+.section--graph .wrapper .con-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.graph-wrapper {
+  position: relative;
+  height: calc(100% - 3rem);
+  margin: 1rem 0 .6rem;
+  height: calc(3rem * 4);
+  border: 1px solid var(--cGrThree);
+  border-top: 0; border-right: 0
+}
+.graph-bars {
+  height: 100%; width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bar {
+  position: relative;
+  height: 100%; 
+  width: 2rem;
+  margin: auto;
+}
+.bar .cash {
+  position: absolute; bottom: 0;
+  width: 100%;
+  height: 3rem;
+  border-radius: 3rem 3rem 0 0;
+  background-color: var(--cGrThree);
+}
+.bar .card {
+  position: absolute; bottom: 0;
+  width: 100%;
+  height: calc(3rem + 2.2rem);
+  background-color: var(--cGrTwo);
+  border-radius: 3rem 3rem 0 0;
+}
+
+.graph-lines {
+  position: absolute; 
+  bottom: 0;
+  width: 100%;
+}
+.graph-lines li {
+  height: 1px; width: 100%;
+  margin-bottom: 2.5em;
+  background-color: #34534D30;
+}
+.graph-lines li:last-child {
+  /* margin-bottom: 0; */
+}
+
+.graph-labels {
+  display: flex;
+  justify-content: space-between;
+  color: var(--cGrThree);
+  font-size:var(--fsSmall);
+  font-weight: bold;
+}
+.graph-labels li {
+  /* width: calc(100% / 5); */
+  text-align: center;
+}

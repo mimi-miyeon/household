@@ -1,27 +1,47 @@
 import React from "react";
-
-import Card from "../UI/Card/Card"
+import { NavLink } from "react-router-dom";
 
 import styles from "./Header.module.css";
 
 const Header = () => {
   return (
     <header>
-      <div className={`${styles["header__inner-content"]} inner-content`}>
+      <nav className={`${styles["header__inner-content"]} inner-content`}>
         <h1>Dashboard</h1>
-        <div>
-          <button type="button">
-            <span role="img" aria-label="list">
+        <ul>
+          <li>
+            <NavLink 
+              to="/" 
+              style={({isActive})=>({display: isActive && "none"})} 
+              end={true}
+            >
+              <span role="img" aria-label="list" title="List">
+                🏡
+              </span>
+            </NavLink>
+          </li>
+          <li>
+          <NavLink 
+            to="/ExpenseList"
+            style={({isActive})=>({display: isActive && "none"})} 
+          >
+            <span role="img" aria-label="list" title="List">
               📖
             </span>
-          </ button>
-          <button type="button">
-            <span role="img" aria-label="wallet">
+          </NavLink>
+          </li>
+          <li>
+          <NavLink 
+            to="/Wallet" 
+            style={({isActive})=>({display: isActive && "none"})} 
+          >
+            <span role="img" aria-label="wallet" title="wallet">
               💸
             </span>
-          </button>
-        </div>
-      </div>
+          </NavLink>
+          </li>
+        </ul>
+      </nav>
     </header>
   );
 };

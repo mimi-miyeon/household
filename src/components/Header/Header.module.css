@@ -15,7 +15,12 @@ header {
   border-bottom: 1px solid var(--cGyOne);
 }
 
-header button {
+header a {
+  /* display: block; */
   font-size: 20px;
   padding: 10px;
+}
+
+header nav ul {
+  display: flex;
 }
