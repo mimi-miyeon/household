@@ -1,5 +1,5 @@
 import React,{useState, useEffect} from "react";
-import styles from "../Asset/Asset.module.css"
+import styles from "./MoneyLeft.module.css"
 
 const DUMMY_DATA = {
   cardTopUp: 700000,
@@ -24,11 +24,10 @@ const MoneyLeft = () => {
   };
 
   return (
-    
-    <div className={styles["total"]}>
-    <p>Money left</p>
-    <h2>￦ {commaHandler(leftMoney)}</h2>
-  </div>
+    <div className={styles["moneyLeft-wrapper"]}>
+      <p>Money left</p>
+      <h2>￦ {commaHandler(leftMoney)}</h2>
+    </div>
   )
 };
 

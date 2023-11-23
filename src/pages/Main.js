@@ -3,17 +3,27 @@ import MoneyLeft from "../components/Main/MoneyLeft/MoneyLeft";
 import Asset from "../components/Main/Asset/Asset";
 import Monthly from "../components/Main/Monthly/Monthly";
 import List from "../components/Main/List/List";
-import styles from "../components/Main/Asset/Asset.module.css"
+import MoneyDataProvider from "../store/money-data";
+import MoreListButton from "../components/Main/List/MoreListButton";
 
 const Main = () => {
   return (
     <>
-      <section className={styles["section--asset"]}>
-        <MoneyLeft />
+      <MoneyDataProvider>
+        <section>
+          <MoneyLeft />
+          <Asset />
+        </section>
+      </MoneyDataProvider>
+
+      <section>
+        <Monthly />
       </section>
-      <Asset />
-      <Monthly />
-      <List />
+
+      <section className="section--list">
+        <List />
+        <MoreListButton />
+      </section>
     </>
   );
 };

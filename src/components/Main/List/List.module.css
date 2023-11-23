@@ -1,8 +1,4 @@
-.section--list {
-  padding-top: 1rem;
-  border-top: 1px solid var(--cGyOne);
-}
-.section--list li {
+.list-wrapper li {
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
@@ -39,43 +35,4 @@
   top: 0;
   color: var(--cGrThree);
   font-weight: bold;
-}
-.section--list .btTypeOne {
-  position: relative; width: fit-content;
-  display: flex; align-items: center;
-  margin: auto;
-}
-.section--list .btTypeOne p {}
-.section--list .btTypeOne span {
-  position:relative;
-  display: block; width: 2.5rem; height: 20px;
-  transition: .3s
-}
-.section--list .btTypeOne span::after {
-  content: '';
-  height: 8px; width: 8px;
-  position: absolute; 
-  right: 0; top: 0rem; bottom: 0;
-  margin: auto 0;
-  border: 1px solid var(--cGrOne); border-left: 0; border-bottom: 0;
-  transform: rotateZ(45deg)
-}
-.section--list .btTypeOne span::before {
-  content: '';
-  position: absolute; 
-  right: 0; top: 0rem; bottom: 0;
-  margin: auto 0;
-  width: 2rem; height: 1px;
-  background-color: var(--cGrOne);
-}
-
-.section--list .btTypeOne:hover span::before,
-.section--list .btTypeOne:active span::before,
-.section--list .btTypeOne:focus span::before {
-  background-color: #fff;
-}
-.section--list .btTypeOne:hover span::after,
-.section--list .btTypeOne:active span::after,
-.section--list .btTypeOne:focus span::after{
-  border-color: #fff;
 }

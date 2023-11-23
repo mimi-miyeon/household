@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import styles from "./List.module.css";
 const DUMMY_LIST = [
@@ -64,23 +63,20 @@ const categoryIconHandler = (category) => {
 
 const List = () => {
   return (
-    <section className={styles["section--list"]}>
-      <div className={styles["list-wrapper"]}>
-        <ul>
-          {DUMMY_SHORT.map(item=>{return (
-            <li key={item.date + "-" + item.itemName}>
-              <span className={styles.icon} role="img" aria-label="food icon">{categoryIconHandler(item.category)}</span>
-              <div className={styles["text-wrapper"]}>
-                <h4>{item.itemName}</h4>
-                <p className={styles.info}>{item.date} · {item.store}</p>
-                <p className={styles.price}>￦ {commaHandler(item.price)}</p>
-              </div>
-            </li>
-          )})}
-        </ul>
-      </div>
-      <Link to="/ExpenseList" className={`${styles.btTypeOne} btTypeOne`}><p>More List</p> <span></span></Link>
-    </section>
+    <div className={styles["list-wrapper"]}>
+      <ul>
+        {DUMMY_SHORT.map(item=>{return (
+          <li key={item.date + "-" + item.itemName}>
+            <span className={styles.icon} role="img" aria-label="food icon">{categoryIconHandler(item.category)}</span>
+            <div className={styles["text-wrapper"]}>
+              <h4>{item.itemName}</h4>
+              <p className={styles.info}>{item.date} · {item.store}</p>
+              <p className={styles.price}>￦ {commaHandler(item.price)}</p>
+            </div>
+          </li>
+        )})}
+      </ul>
+    </div>
   )
 };
 

@@ -5,7 +5,6 @@ import styles from "./Monthly.module.css";
 // graph month labels
 
 /*
-const arr_monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const thisMonthIndex = new Date().getMonth();
 const n_originGraphCount = 5;
 
@@ -17,6 +16,7 @@ const arr_labelNames2 = arr_monthNames.slice(n_lastStartIndex);
 
 const arr_labelNames = arr_labelNames2.concat(arr_labelNames1);
 */
+const arr_monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
 // DUMMY DATA for Graph
 const EXPENSE_DUMMY = [
@@ -24,25 +24,65 @@ const EXPENSE_DUMMY = [
     year: 2023,
     month: 11,
     cashSpent: 3000,
-    cardSpent: 6000,
+    cardSpent: 60000,
     cashAdded: 0,
-    cardAdded: 9000,
-    spentList : [
-      {
-        title: "",
-        date: null,
-        store: "",
-        price: null,
-        category: ""
-      }
-    ],
-    // totalAdded: this.cardAdded + this.cashAdded,
-      // totalSpent: this.cash + this.card,
-      // totalLeft: this.totalAdded - this.totalSpent
+    cardAdded: 600000
+  },
+  {
+    year: 2023,
+    month: 10,
+    cashSpent: 30000,
+    cardSpent: 556300,
+    cashAdded: 0,
+    cardAdded: 600000
+  },
+  {
+    year: 2023,
+    month: 9,
+    cashSpent: 500000,
+    cardSpent: 100000,
+    cashAdded: 0,
+    cardAdded: 600000
+  },
+  {
+    year: 2023,
+    month: 8,
+    cashSpent: 300000,
+    cardSpent: 236300,
+    cashAdded: 0,
+    cardAdded: 600000
+  },
+  {
+    year: 2023,
+    month: 7,
+    cashSpent: 13000,
+    cardSpent: 466300,
+    cashAdded: 0,
+    cardAdded: 600000
+  },
+  {
+    year: 2023,
+    month: 6,
+    cashSpent: 3000,
+    cardSpent: 560000,
+    cashAdded: 0,
+    cardAdded: 600000
+  },
+  {
+    year: 2023,
+    month: 5,
+    cashSpent: 30000,
+    cardSpent: 501000,
+    cashAdded: 0,
+    cardAdded: 600000
   }
 ];
 
-const arr_EXPENSE_DUMMY = EXPENSE_DUMMY.slice(0, 5);
+const arr_EXPENSE_DUMMY = EXPENSE_DUMMY.slice(0, 5).reverse();
+
+const monthConvertHandler = (month) => {
+  return arr_monthNames[month -1];
+};
 
 const graphHeightHandler = (total, sum) => {
   const perPercent = total/100;
@@ -52,32 +92,33 @@ const graphHeightHandler = (total, sum) => {
 
 const Monthly = () => {
   return (
-    <section className={styles["section--graph"]}>
-      <div className={styles.wrapper}>
-        <h2>Monthly</h2>
-        <div className={styles["con-wrapper"]}>
-          <div className={styles["graph-wrapper"]}>
-            <ul className={styles["graph-lines"]}>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-            <ul className={styles["graph-bars"]}>
-              {arr_EXPENSE_DUMMY.map(graph => {return (
-                <li key={graph.month} className={styles.bar}>
-                  <span className={styles.card} style={{height: `${graphHeightHandler(graph.cashAdded+graph.cardAdded, graph.cashSpent+graph.cardSpent)}%`}} title={graph.cardSpent}></span>
-                  <span className={styles.cash} style={{height: `${graphHeightHandler(graph.cashAdded+graph.cardAdded, graph.cashSpent)}%`}} title={graph.cashSpent}></span>
-                </li>
-              )})}
-            </ul>
-          </div>
+    <div className={styles["graph-wrapper"]}>
+      <h2>Monthly</h2>
+      <div className={styles["graph"]}>
+        <div className={styles["graph--inside"]}>
+          <ul className={styles["graph-lines"]}>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <ul className={styles["graph-bars"]}>
+            {arr_EXPENSE_DUMMY.map(graph => {return (
+              <li key={graph.month} className={styles.bar}>
+                <span className={styles.card} style={{height: `${graphHeightHandler(graph.cashAdded+graph.cardAdded, graph.cardSpent)}%`}} title={graph.cardSpent}></span>
+                <span className={styles.cash} style={{height: `${graphHeightHandler(graph.cashAdded+graph.cardAdded, graph.cashSpent)}%`}} title={graph.cashSpent}></span>
+                <span className={styles["money-left"]} style={{height: `${graphHeightHandler(graph.cashAdded+graph.cardAdded, (graph.cashAdded+graph.cardAdded)-(graph.cardSpent+graph.cashSpent))}%`}} title={(graph.cashAdded+graph.cardAdded)-(graph.cardSpent+graph.cashSpent)}></span>
+              </li>
+            )})}
+          </ul>
+        </div>
+        <div className={styles["graph--outside"]}>
           <ul className={styles["graph-labels"]}>
-            {arr_EXPENSE_DUMMY.map(label=> {return <li style={{width: `calc(100% / ${arr_EXPENSE_DUMMY.length})`}} key={label.month}>{label.month}</li>})}
+            {arr_EXPENSE_DUMMY.map(label=> {return <li style={{width: `calc(100% / ${arr_EXPENSE_DUMMY.length})`}} key={label.month}>{monthConvertHandler(label.month)}</li>})}
           </ul>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
