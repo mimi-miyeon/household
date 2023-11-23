@@ -23,10 +23,10 @@ const EXPENSE_DUMMY = [
   {
     year: 2023,
     month: 11,
-    cashSpent: 30000,
-    cardSpent: 0,
+    cashSpent: 3000,
+    cardSpent: 6000,
     cashAdded: 0,
-    cardAdded: 600000,
+    cardAdded: 9000,
     spentList : [
       {
         title: "",
@@ -43,6 +43,13 @@ const EXPENSE_DUMMY = [
 ];
 
 const arr_EXPENSE_DUMMY = EXPENSE_DUMMY.slice(0, 5);
+
+const graphHeightHandler = (total, sum) => {
+  const perPercent = total/100;
+  const sumHeight = Math.floor(sum/perPercent);
+  return sumHeight;
+};
+
 const Monthly = () => {
   return (
     <section className={styles["section--graph"]}>
@@ -57,12 +64,12 @@ const Monthly = () => {
               <li></li>
             </ul>
             <ul className={styles["graph-bars"]}>
-              {arr_EXPENSE_DUMMY.map(graph => { return (
-                <li className={styles.bar}>
-                  <span className={styles.card} style={{height: "100%"}}>{graph.cardSpent}</span>
-                  <span className={styles.cash} style={{height: "20%"}}>{graph.cashSpent}</span>
+              {arr_EXPENSE_DUMMY.map(graph => {return (
+                <li key={graph.month} className={styles.bar}>
+                  <span className={styles.card} style={{height: `${graphHeightHandler(graph.cashAdded+graph.cardAdded, graph.cashSpent+graph.cardSpent)}%`}} title={graph.cardSpent}></span>
+                  <span className={styles.cash} style={{height: `${graphHeightHandler(graph.cashAdded+graph.cardAdded, graph.cashSpent)}%`}} title={graph.cashSpent}></span>
                 </li>
-              )})              }
+              )})}
             </ul>
           </div>
           <ul className={styles["graph-labels"]}>

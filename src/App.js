@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 
 import "./style.css";
-import Main from "./pages/Main/Main"
+import Main from "./pages/Main"
 import MainLayout from "./pages/MainLayout";
 import ExpenseList from "./pages/ExpenseList";
 import Wallet from "./pages/Wallet";
