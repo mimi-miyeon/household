@@ -2,7 +2,9 @@
   --inner-content-width : 600px;
   --cGrOne : #B6E2DD;
   --cGrTwo : #85AEA6;
+  --cGrTwoOp : #85aea6bd;
   --cGrThree : #34534D;
+  --cGrThreeOp: #34534de3;
   --cGrFour : #DEF54D;
   --cGyOne : #D9E5E3;
   --cGyTwo: #E8E8E8;
@@ -45,9 +47,14 @@ button:active,
 button:hover {
   transform: translateY(-5px);
 }
-option,
-select {
-  
+input {
+  padding: 1rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: transparent;
+}
+input:focus-visible {
+  outline: 1px solid var(--cGrThree);
 }
 option:focus-visible,
 select:focus-visible,
@@ -72,10 +79,12 @@ section {
   margin: 2rem 0;
 }
 
+.btTypeFour,
+.btTypeThree,
 .btTypeTwo,
 .btTypeOne {
   display: inline-block;
-  padding: .7rem 1.6rem;
+  padding: 1rem 1.6rem;
   background: linear-gradient(150deg, #34534de0 40%, #b6e2dde0 170%);
   background-color: var(--cGrThree);
   color: var(--cGrOne);
@@ -86,6 +95,13 @@ section {
 }
 .btTypeTwo {
   background: linear-gradient(150deg, #000000e0 40%, #DEF54D 170%);
+}
+.btTypeThree {
+  background: var(--cGrThree);
+}
+.btTypeFour {
+  color: var(--cGrThree);
+  background: var(--cGrTwo);
 }
 
 .select {
@@ -119,10 +135,22 @@ section {
   background-color: black;
 }
 
+.btTypeFour:hover,
+.btTypeFour:active {
+  background-color: var(--cGrTwoOp);
+  transform: none;
+}
+.btTypeThree:hover,
+.btTypeThree:active {
+  background-color: var(--cGrThreeOp);
+  transform: none;
+}
 .select option {
   padding: .7rem 0;
   background-color: transparent;
 }
+
+
 
 @media (max-width: 640px ) {
   :root {

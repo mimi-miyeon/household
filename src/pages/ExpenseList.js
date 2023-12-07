@@ -5,13 +5,13 @@ import List from "../components/Main/List/List";
 import MoneyDataProvider from "../store/money-data";
 import ActionButtons from "../components/Main/ActionButtons/ActionButtons";
 
-const ExpenseList = () => {
+const ExpenseList = ({onOpenModal}) => {
   return (
     <section className={styles["section--asset"]}>
       <MoneyDataProvider>
         <MoneyLeft />
       </MoneyDataProvider>
-      <ActionButtons />
+      <ActionButtons onOpenModal={onOpenModal} />
       <List />
     </section>
   );
