@@ -1,11 +1,9 @@
 .modal {
   position: fixed;
-  top: 30vh;
-  /* left: 10%; */
-  /* width: 80%; */
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 100;
   overflow: hidden;
-  background-color: white;
 }
 .inner-content--modal {
   width: calc(var(--inner-content-width) - 4rem);
@@ -55,6 +53,16 @@
 }
 .modal-button-wrapper button:last-child{
   margin-right: 0;
+}
+.modal-button-wrapper button[type="submit"]:disabled {
+  /* color: var(--cGrThree);
+  background-color: var(--cGrTwo);
+  border-color: var(--cGrTwo) */
+  opacity: .3;
+}
+.modal-button-wrapper button[type="submit"]:disabled:active ,
+.modal-button-wrapper button[type="submit"]:disabled:hover {
+  background: var(--cGrThree);
 }
 .modal-backdrop {
   position: fixed;

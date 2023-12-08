@@ -56,6 +56,30 @@ input {
 input:focus-visible {
   outline: 1px solid var(--cGrThree);
 }
+input[type="number"] {
+  /* 모든 브라우저에서 스타일 초기화 */
+  -moz-appearance: textfield;
+  appearance: textfield;
+
+  /* Webkit 브라우저 (Chrome, Safari)에서 스타일 초기화 */
+  -webkit-appearance: none;
+  margin: 0;
+
+  /* Firefox에서의 추가 스타일 초기화 */
+  width: auto;
+}
+
+/* Firefox에서 버튼이 나타나지 않도록 처리 */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* IE에서 버튼이 나타나지 않도록 처리 */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
 option:focus-visible,
 select:focus-visible,
 option:active,
@@ -66,7 +90,14 @@ select:focus {
   stroke: none;
   outline: none;
 }
-
+/* 자동완성 활성화 시 배경 색상 수정 */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 50000000s ease-in-out 0s;
+  background-color: var(--cGrThreeOp) !important;
+}
 main,
 .inner-content {
   width: var(--inner-content-width);
