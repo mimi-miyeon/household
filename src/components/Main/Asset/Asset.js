@@ -1,10 +1,10 @@
 import React, { useContext, useEffect, useState } from "react";
-import {MoneyData} from "../../../store/money-data";
+import {Data} from "../../../store/money-data";
 
 import styles from "./Asset.module.css"
 
 const Asset = () => {
-  const { commaInsertHandler } = useContext(MoneyData);
+  const {commaInsertHandler} = useContext(Data).moneyData;
 
   const DUMMY_DATA = {
     cardTopUp: 700000,

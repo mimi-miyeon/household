@@ -1,23 +1,35 @@
-import React , {useState, useEffect} from "react";
+import React , {useState, useEffect, useContext} from "react";
 import ReactDOM from "react-dom";
 import styles from "./Modal.module.css";
+import {Data} from "../../store/money-data";
 
 const ModalBackdrop = ({onCloseModal}) => {
   return <div className={styles["modal-backdrop"]} onClick={onCloseModal}></div>
 };
 const ModalCon = ({onCloseModal}) => {
+  // const {itemInfo} = useContext(Data);
+  const {itemInfoHandler} = useContext(Data);
+  const [isFormValid, setIsFormValid] = useState(false);
+
+  // form input들이 모두 작성 되었는지 확인하기 위한 코드
   const [formData, setFormData] = useState({
     category: '',
     store: '',
     date: '',
     size: '',
-    itemName: ''
+    itemName: '',
+    price: '',
+    method:'',
   });
+  
   useEffect(() => {
+    // input change로 formData state가 변경될 때 마다 isValid 확인
+    // formData의 값이 모두 ''가 아니면 isValid는 true, ''면 false
     const isValid = Object.values(formData).every(value => value.trim() !== '');
     setIsFormValid(isValid);
   }, [formData]);
 
+  // input 값이 변할 때, formData state에 해당 input name과 value 업데이트
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -26,11 +38,13 @@ const ModalCon = ({onCloseModal}) => {
     });
   };
 
+  // form이 submit 되었을 때 
   const handleSubmit = (e) => {
     e.preventDefault();
+    itemInfoHandler(formData);
     onCloseModal();
   };
-  const [isFormValid, setIsFormValid] = useState(false);
+  
 
   return (
     <form className={styles.modal} aria-label="modal" onSubmit={handleSubmit}>
@@ -50,6 +64,17 @@ const ModalCon = ({onCloseModal}) => {
             </li>
             <li>
               <input type="text" name="itemName" placeholder="Item name" onChange={handleInputChange} required />
+              <ul>
+                <li>
+                  <input type="radio" id="cash" name="method" value="cash" required onChange={handleInputChange} />
+                  <label htmlFor="cash">Cash</label>
+                </li>
+                <li>
+                  <input type="radio" id="card" name="method" value="card" required onChange={handleInputChange} />
+                  <label htmlFor="card">Card</label>
+                </li>
+                <input type="number" name="price" placeholder="price" onChange={handleInputChange} required />
+              </ul>
             </li>
           </ul>
         </div>

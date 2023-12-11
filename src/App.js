@@ -7,6 +7,7 @@ import MainLayout from "./pages/MainLayout";
 import ExpenseList from "./pages/ExpenseList";
 import Wallet from "./pages/Wallet";
 import Modal from "./components/Modal/Modal";
+import DataProvider from "./store/money-data";
 
 
 export default function App() {  
@@ -35,9 +36,9 @@ export default function App() {
   }, []);
   
   return (
-    <>
+    <DataProvider>
       <RouterProvider router={router} />
       {openModal && <Modal onCloseModal={closeModalHandler} />}
-    </>
+    </DataProvider>
   )
 }

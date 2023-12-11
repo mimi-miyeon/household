@@ -24,7 +24,7 @@
 .modal-body input {
   width: 100%;
   margin-right: 1rem;
-  color: var(--cGrTwo);
+  /* color: var(--cGrTwo); */
   background-color: #ffffff30;
 }
 .modal-body input:last-child {
@@ -36,6 +36,15 @@
 .modal-body input::-webkit-placeholder {
   color: var(--cGrTwo);
 }
+.modal-body input[type="text"] {
+  color: var(--cGrThree);
+}
+.modal-body input[type="date"] {
+  color: var(--cGrTwo);
+}
+/* .modal-body input[type="date"]:focus {
+  color: var(--cGrThree);
+} */
 .modal-body ul {}
 .modal-body li {
   display:flex;

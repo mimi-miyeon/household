@@ -3,18 +3,18 @@ import MoneyLeft from "../components/Main/MoneyLeft/MoneyLeft";
 import Asset from "../components/Main/Asset/Asset";
 import Monthly from "../components/Main/Monthly/Monthly";
 import List from "../components/Main/List/List";
-import MoneyDataProvider from "../store/money-data";
+import DataProvider from "../store/money-data";
 import MoreListButton from "../components/Main/List/MoreListButton";
 
 const Main = () => {
   return (
     <>
-      <MoneyDataProvider>
+      <DataProvider>
         <section>
           <MoneyLeft />
           <Asset />
         </section>
-      </MoneyDataProvider>
+      </DataProvider>
 
       <section>
         <Monthly />

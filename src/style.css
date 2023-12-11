@@ -80,6 +80,15 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+/* Calendar 아이콘 숨기기 (Chrome, Safari) */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+/* Calendar 아이콘 숨기기 (Firefox) */
+input[type="date"]::-moz-calendar-picker-indicator {
+  display: none;
+}
 option:focus-visible,
 select:focus-visible,
 option:active,

@@ -1,5 +1,6 @@
-import React,{useState, useEffect} from "react";
+import React,{useState, useEffect, useContext} from "react";
 import styles from "./MoneyLeft.module.css"
+import { Data } from "../../../store/money-data";
 
 const DUMMY_DATA = {
   cardTopUp: 700000,
@@ -12,7 +13,9 @@ const MoneyLeft = () => {
   const [leftMoney, setLeftMoney] = useState(DUMMY_DATA.cardTopUp+DUMMY_DATA.cashTopUp-DUMMY_DATA.cashSpent-DUMMY_DATA.cardSpent);
   const [cardLeft, setCardLeft] = useState(DUMMY_DATA.cardTopUp-DUMMY_DATA.cashSpent);
   const [cashLeft, setCashLeft] = useState(DUMMY_DATA.cashTopUp-DUMMY_DATA.cardSpent);
-  
+  // const {cashOut} = useContext(Data).moneyData;
+  // const {cardOut} = useContext(Data).moneyData;
+
   useEffect(()=>{
     setLeftMoney(DUMMY_DATA.cardTopUp+DUMMY_DATA.cashTopUp-DUMMY_DATA.cashSpent-DUMMY_DATA.cardSpent);
     setCardLeft(DUMMY_DATA.cardTopUp-DUMMY_DATA.cashSpent);

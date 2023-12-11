@@ -1,51 +1,7 @@
-import React from "react";
+import React, { useState, useContext, useEffect } from "react";
 
 import styles from "./List.module.css";
-const DUMMY_LIST = [
-  {
-    itemName : "Banana",
-    price: 3000,
-    store: "NoBrand",
-    date: "2/11/2023",
-    category: "Food",
-    type: "-"
-  },
-  {
-    itemName : "Banana",
-    price: 3000,
-    store: "NoBrand",
-    date: "2/11/2023",
-    category: "",
-    type: "-"
-  },
-  {
-    itemName : "Banana",
-    price: 3000,
-    store: "NoBrand",
-    date: "2/11/2023",
-    category: "Food",
-    type: "-"
-  },
-  {
-    itemName : "Banana",
-    price: 3000,
-    store: "NoBrand",
-    date: "2/11/2023",
-    category: "Food",
-    type: "-"
-  },
-  {
-    itemName : "Banana",
-    price: 3000,
-    store: "NoBrand",
-    date: "2/11/2023",
-    category: "",
-    type: "-"
-  },
-
-];
-
-const DUMMY_SHORT = DUMMY_LIST.slice(0,2);
+import { Data } from "../../../store/money-data";
 
 const commaHandler = (sum) => {
   return sum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -62,12 +18,19 @@ const categoryIconHandler = (category) => {
 };
 
 const List = () => {
+  const {itemInfo} = useContext(Data);
+  const [slicedItem, setSlicedItem] = useState([]);
+
+  useEffect(()=>{
+    setSlicedItem(itemInfo);
+  },[itemInfo]);
+
   return (
     <div className={styles["list-wrapper"]}>
       <ul>
-        {DUMMY_SHORT.map(item=>{return (
+        {slicedItem.map(item=>{return (
           <li key={item.date + "-" + item.itemName}>
-            <span className={styles.icon} role="img" aria-label="food icon">{categoryIconHandler(item.category)}</span>
+            <span className={styles.icon} role="img" aria-label="category icon">{categoryIconHandler(item.category)}</span>
             <div className={styles["text-wrapper"]}>
               <h4>{item.itemName}</h4>
               <p className={styles.info}>{item.date} · {item.store}</p>
