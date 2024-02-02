@@ -79,7 +79,7 @@ const ModalCon = ({onCloseModal}) => {
           </ul>
         </div>
         <div className={styles["modal-footer"]} aria-label="modal-footer">
-          <div className={styles["modal-button-wrapper"]}>
+          <div className="button-wrapper">
             <button className="btTypeThree" type="submit" disabled={!isFormValid}>Add</button>
             <button className="btTypeFour" type="button" onClick={onCloseModal}>Cancel</button>
           </div>

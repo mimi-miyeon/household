@@ -1,13 +1,29 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 
 import styles from "./Header.module.css";
 
 const Header = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const [pageName, setPageName] = useState(location.pathname.slice(1));
+
+  // useEffect(() => {
+  //   // Listen for changes in location (when NavLink is clicked)
+  //   const unlisten = navigate((newLocation) => {
+  //     setPageName(newLocation.pathname.slice(1));
+  //   });
+
+  //   // Clean up the listener when the component unmounts
+  //   return () => {
+  //     unlisten();
+  //   };
+  // }, [navigate]);
+
   return (
     <header>
       <nav className={`${styles["header__inner-content"]} inner-content`}>
-        <h1>Dashboard</h1>
+        <h1>{pageName}</h1>
         <ul>
           <li>
             <NavLink 

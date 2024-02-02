@@ -21,6 +21,7 @@
 .modal-body {
   margin-bottom: 2rem;
 }
+.modal-body input[type="radio"] + label,
 .modal-body input {
   width: 100%;
   margin-right: 1rem;
@@ -36,22 +37,20 @@
 .modal-body input::-webkit-placeholder {
   color: var(--cGrTwo);
 }
+.modal-body input[type="radio"] + label,
 .modal-body input[type="text"] {
   color: var(--cGrThree);
 }
 .modal-body input[type="date"] {
   color: var(--cGrTwo);
 }
-/* .modal-body input[type="date"]:focus {
-  color: var(--cGrThree);
-} */
 .modal-body ul {}
 .modal-body li {
   display:flex;
   margin-bottom: 1rem;
 }
 .modal-footer {}
-.modal-button-wrapper {
+/* .modal-button-wrapper {
   display: flex;
   justify-content: space-between;
 }
@@ -64,15 +63,12 @@
   margin-right: 0;
 }
 .modal-button-wrapper button[type="submit"]:disabled {
-  /* color: var(--cGrThree);
-  background-color: var(--cGrTwo);
-  border-color: var(--cGrTwo) */
   opacity: .3;
 }
 .modal-button-wrapper button[type="submit"]:disabled:active ,
 .modal-button-wrapper button[type="submit"]:disabled:hover {
   background: var(--cGrThree);
-}
+} */
 .modal-backdrop {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;

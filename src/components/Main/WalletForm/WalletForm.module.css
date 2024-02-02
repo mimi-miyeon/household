@@ -1,0 +1,31 @@
+.wallet-form {}
+.wallet-form__wrapper {}
+.wallet-form__wrapper {}
+.form-field {
+  margin-bottom: 2rem;
+}
+.form-field li{
+  margin-bottom: 1rem;
+}
+.wallet-form__radio-field {
+  display: flex;
+  justify-content: space-between;
+}
+.radio-field__wrapper {
+  display: flex;
+  text-align: center;
+}
+.radio-field__wrapper li {
+  margin-right: 1rem;
+}
+.radio-field__wrapper li:last-child {
+  margin-right: 0;
+}
+.radio-field__wrapper li label{
+  padding: .5rem .4rem;
+  color: var(--cGrTwo);
+  font-size: var(--fsSmall);
+}
+.radio-field__wrapper li input[type="radio"] + label{
+  border: 0;
+}

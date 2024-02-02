@@ -47,11 +47,8 @@ button:active,
 button:hover {
   transform: translateY(-5px);
 }
+input[type="radio"] + label,
 input {
-  padding: 1rem;
-  border: none;
-  border-radius: 1rem;
-  background-color: transparent;
 }
 input:focus-visible {
   outline: 1px solid var(--cGrThree);
@@ -107,6 +104,36 @@ input:-webkit-autofill:active {
   transition: background-color 50000000s ease-in-out 0s;
   background-color: var(--cGrThreeOp) !important;
 }
+input[type="radio"] + label,
+input {
+  display: inline-block;
+  width: 100%;
+  margin-right: 1rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 1rem;
+  color: #000;
+  background-color: var(--cGyTwo);
+  box-sizing: border-box;
+}
+input::placeholder,
+/* input::-moz-placeholder,
+input::-ms-placeholder, */
+input::-webkit-placeholder {
+  color: var(--cGrTwo);
+}
+input[type="radio"] {
+  display: none;
+}
+input[type="radio"] + label {
+  cursor: pointer;
+}
+input[type="radio"]:checked + label {
+  color: var(--cGyTwo);
+  background-color: var(--cGrThree);
+  border: 1px solid var(--cGrThree);
+}
+
 main,
 .inner-content {
   width: var(--inner-content-width);
@@ -190,7 +217,25 @@ section {
   background-color: transparent;
 }
 
-
+.button-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.button-wrapper button {
+  margin-right: 1rem;
+  font-weight: bold;
+  width: 100%;
+}
+.button-wrapper button:last-child{
+  margin-right: 0;
+}
+.button-wrapper button[type="submit"]:disabled {
+  opacity: .3;
+}
+.button-wrapper button[type="submit"]:disabled:active ,
+.button-wrapper button[type="submit"]:disabled:hover {
+  background: var(--cGrThree);
+}
 
 @media (max-width: 640px ) {
   :root {
