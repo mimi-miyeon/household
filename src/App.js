@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { BrowserRouter, createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import "./style.css";
 import Main from "./pages/Main"
@@ -36,9 +36,11 @@ export default function App() {
   }, []);
   
   return (
+    <BrowserRouter basename="https://mimi-miyeon.github.io/household/">
     <DataProvider>
       <RouterProvider router={router} />
       {openModal && <Modal onCloseModal={closeModalHandler} />}
     </DataProvider>
+    </BrowserRouter>
   )
 }
