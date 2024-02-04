@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/mimi-miyeon/household/static/css/main.54528885.css",
+    "main.js": "/mimi-miyeon/household/static/js/main.295e169d.js",
+    "static/js/787.c92eae42.chunk.js": "/mimi-miyeon/household/static/js/787.c92eae42.chunk.js",
+    "index.html": "/mimi-miyeon/household/index.html",
+    "main.54528885.css.map": "/mimi-miyeon/household/static/css/main.54528885.css.map",
+    "main.295e169d.js.map": "/mimi-miyeon/household/static/js/main.295e169d.js.map",
+    "787.c92eae42.chunk.js.map": "/mimi-miyeon/household/static/js/787.c92eae42.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.54528885.css",
+    "static/js/main.295e169d.js"
+  ]
+}
