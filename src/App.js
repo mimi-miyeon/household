@@ -27,9 +27,9 @@ export default function App() {
         path: "/", 
         element: <MainLayout />,
         children: [
-          {path: "/", element: <Main />},
-          {path: "/ExpenseList", element: <ExpenseList onOpenModal={openModalHandler} onCloseAddItem={closeModalHandler} />},
-          {path: "/Wallet", element: <Wallet />}
+          {path: "/mimispace1", element: <Main />},
+          {path: "/mimispace1/ExpenseList", element: <ExpenseList onOpenModal={openModalHandler} onCloseAddItem={closeModalHandler} />},
+          {path: "/mimispace1/Wallet", element: <Wallet />}
         ]
       }
     ]);  
