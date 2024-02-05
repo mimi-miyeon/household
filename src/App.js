@@ -36,7 +36,8 @@ export default function App() {
   }, []);
   
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter basename="https://mimi-miyeon.github.io/household/">
+    {/* <BrowserRouter basename={process.env.PUBLIC_URL}> */}
       <DataProvider>
         <RouterProvider router={router} />
         {openModal && <Modal onCloseModal={closeModalHandler} />}
