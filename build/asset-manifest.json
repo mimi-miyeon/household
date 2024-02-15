@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "//mimi-miyeon.github.io/mimispace1/static/css/main.f87fd11f.css",
+    "main.js": "//mimi-miyeon.github.io/mimispace1/static/js/main.454d3fa5.js",
+    "static/js/787.c92eae42.chunk.js": "//mimi-miyeon.github.io/mimispace1/static/js/787.c92eae42.chunk.js",
+    "index.html": "//mimi-miyeon.github.io/mimispace1/index.html",
+    "main.f87fd11f.css.map": "//mimi-miyeon.github.io/mimispace1/static/css/main.f87fd11f.css.map",
+    "main.454d3fa5.js.map": "//mimi-miyeon.github.io/mimispace1/static/js/main.454d3fa5.js.map",
+    "787.c92eae42.chunk.js.map": "//mimi-miyeon.github.io/mimispace1/static/js/787.c92eae42.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f87fd11f.css",
+    "static/js/main.454d3fa5.js"
+  ]
+}
