@@ -1,16 +1,16 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
 import Header from "../components/Header/Header";
+import Asset from "../components/Asset/Asset";
 
-const MainLayout = () => {
+const Body = () => {
   return (
     <>
       <Header />
       <main>
-        <Outlet />
+        <Asset />
       </main>
     </>
   );
 };
 
-export default MainLayout;
+export default Body;
