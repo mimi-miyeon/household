@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from "react";
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, HashRouter, RouterProvider } from "react-router-dom";
 
 import "./style.css";
 import Main from "./pages/Main"
@@ -36,8 +36,11 @@ export default function App() {
   }, []);
   
   return (
-    <DataProvider>
-      {openModal && <Modal onCloseModal={closeModalHandler} />}
-    </DataProvider>
+    // <HashRouter>
+      <DataProvider>
+        <HashRouter router={router} />
+        {openModal && <Modal onCloseModal={closeModalHandler} />}
+      </DataProvider>
+    // </HashRouter>
   )
 }
