@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/household/static/css/main.54528885.css",
-    "main.js": "/household/static/js/main.02f3ac8d.js",
-    "static/js/787.c92eae42.chunk.js": "/household/static/js/787.c92eae42.chunk.js",
-    "index.html": "/household/index.html",
-    "main.54528885.css.map": "/household/static/css/main.54528885.css.map",
-    "main.02f3ac8d.js.map": "/household/static/js/main.02f3ac8d.js.map",
-    "787.c92eae42.chunk.js.map": "/household/static/js/787.c92eae42.chunk.js.map"
+    "main.css": "//mimi-miyeon.github.io/mimispace1/static/css/main.f87fd11f.css",
+    "main.js": "//mimi-miyeon.github.io/mimispace1/static/js/main.454d3fa5.js",
+    "static/js/787.c92eae42.chunk.js": "//mimi-miyeon.github.io/mimispace1/static/js/787.c92eae42.chunk.js",
+    "index.html": "//mimi-miyeon.github.io/mimispace1/index.html",
+    "main.f87fd11f.css.map": "//mimi-miyeon.github.io/mimispace1/static/css/main.f87fd11f.css.map",
+    "main.454d3fa5.js.map": "//mimi-miyeon.github.io/mimispace1/static/js/main.454d3fa5.js.map",
+    "787.c92eae42.chunk.js.map": "//mimi-miyeon.github.io/mimispace1/static/js/787.c92eae42.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.54528885.css",
-    "static/js/main.02f3ac8d.js"
+    "static/css/main.f87fd11f.css",
+    "static/js/main.454d3fa5.js"
   ]
 }
