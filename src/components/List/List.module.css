@@ -1,0 +1,38 @@
+.list-wrapper li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 1rem
+}
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  padding: .8rem;
+  background-color: var(--cGyOne);
+  font-size: 1.3rem;
+  border-radius: .8rem;
+}
+.list-wrapper {
+  margin-bottom: 2rem;
+}
+.text-wrapper {
+  width: 100%;
+  position: relative
+}
+
+.text-wrapper p {}
+.text-wrapper p.info {
+  color: var(--cGyOne);
+  font-size: var(--fsSmall)
+}
+.text-wrapper p.price {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: var(--cGrThree);
+  font-weight: bold;
+}
