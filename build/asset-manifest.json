@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/mimispace1/static/css/main.ea0fa4c4.css",
+    "main.js": "/mimispace1/static/js/main.da19415b.js",
+    "static/js/787.63a3d4ac.chunk.js": "/mimispace1/static/js/787.63a3d4ac.chunk.js",
+    "index.html": "/mimispace1/index.html",
+    "main.ea0fa4c4.css.map": "/mimispace1/static/css/main.ea0fa4c4.css.map",
+    "main.da19415b.js.map": "/mimispace1/static/js/main.da19415b.js.map",
+    "787.63a3d4ac.chunk.js.map": "/mimispace1/static/js/787.63a3d4ac.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ea0fa4c4.css",
+    "static/js/main.da19415b.js"
+  ]
+}
